@@ -1,23 +1,29 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import confetti from 'canvas-confetti';
 import { NgIf } from '@angular/common';
-
+import confetti from 'canvas-confetti';
 
 @Component({
   selector: 'app-greeting',
   standalone: true,
-  imports: [RouterLink,NgIf],
+  imports: [RouterLink, NgIf],
   templateUrl: './greeting.html',
-  styleUrls: ['./greeting.css'],
+  styleUrls: ['./greeting.css']
 })
-export class GreetingComponent  {
+export class GreetingComponent implements OnInit {
 
-    isOpen = false;
+  isOpen = false;
 
-  openLetter(){
+  ngOnInit() {
+    this.startConfettiLoop();
+  }
 
+  openLetter() {
     this.isOpen = true;
+    this.launchConfetti();
+  }
+
+  launchConfetti() {
 
     confetti({
       particleCount: 200,
@@ -27,5 +33,12 @@ export class GreetingComponent  {
 
   }
 
-}
+  startConfettiLoop() {
 
+    setInterval(() => {
+      this.launchConfetti();
+    }, 20000);
+
+  }
+
+}
