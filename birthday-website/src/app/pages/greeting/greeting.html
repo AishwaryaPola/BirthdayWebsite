@@ -1,6 +1,9 @@
 <div class="birthday-container">
-
+<!-- <h2 class="page-title">A Veryyy Happyyyy Birthdayyyy To Youuuuuuu 🎉</h2  > -->
   <!-- floating balloons -->
+    <p  *ngIf="!isOpen" class="hint-text">
+    A little surprise is waiting for you ✨
+  </p>
   <div class="balloons">
     <span>🎈</span>
     <span>🎈</span>
@@ -41,8 +44,28 @@
     <span>🎉</span>
     <span>🎉</span>
   </div>
+  <div class="sparkles">
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+  <span>✨</span>
+</div>
+
+<div class="cakes">
+  <span>🎂</span>
+  <span>🎂</span>
+</div>
 
   <div class="wrapper">
+   
 
     <div class="envelope" [class.open]="isOpen">
 
@@ -78,6 +101,7 @@
 
   </div>
 
+  
   <button *ngIf="!isOpen" class="open-btn" (click)="openLetter()">
     Open Letter😁❤️
   </button>
