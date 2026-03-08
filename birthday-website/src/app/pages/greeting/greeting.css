@@ -124,7 +124,30 @@
 .hearts span:nth-child(2){left:50%}
 .hearts span:nth-child(3){left:75%}
 
+
 @keyframes heartFloat{
   from{transform:translateY(0);opacity:1}
   to{transform:translateY(-110vh);opacity:0}
+}
+.party span{
+  position:absolute;
+  bottom:-80px;
+  font-size:28px;
+  animation:partyFloat 8s linear infinite;
+}
+
+.party span:nth-child(1){left:15%}
+.party span:nth-child(2){left:45%; animation-duration:6s}
+.party span:nth-child(3){left:70%; animation-duration:7s}
+.party span:nth-child(4){left:90%; animation-duration:9s}
+
+@keyframes partyFloat{
+  from{
+    transform:translateY(0) rotate(0deg);
+    opacity:1;
+  }
+  to{
+    transform:translateY(-110vh) rotate(360deg);
+    opacity:0;
+  }
 }
