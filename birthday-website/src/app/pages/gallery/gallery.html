@@ -1,1 +1,42 @@
-<p>gallery works!</p>
+<div class="gallery-container">
+
+  <div class="background-decor">
+    <span>🎈</span>
+    <span>🎉</span>
+    <span>💖</span>
+    <span>✨</span>
+    <span>🎂</span>
+  </div>
+
+  <h1 class="gallery-title">
+    Some Beautiful Moments of You 💫
+  </h1>
+
+  <div class="polaroid-wall">
+
+    @for (memory of memories; track memory) {
+
+      <div class="polaroid" (click)="openImage(memory.image)">
+
+        <img [src]="memory.image" alt="memory">
+
+        <div class="caption">
+          <p>{{memory.description}}</p>
+          <span class="date">{{memory.date}}</span>
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+  @if (selectedImage) {
+
+    <div class="image-viewer" (click)="closeImage()">
+      <img [src]="selectedImage">
+    </div>
+
+  }
+
+</div>
