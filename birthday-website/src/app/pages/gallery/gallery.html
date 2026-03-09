@@ -12,6 +12,10 @@
     Some Beautiful Moments of You 💫
   </h1>
 
+  <p class="memory-subtitle">
+    Every picture here holds a little story and a beautiful moment
+  </p>
+
   <div class="polaroid-wall">
 
     @for (memory of memories; track memory) {
@@ -31,11 +35,12 @@
 
   </div>
 
-  @if (selectedImage) {
 
-    <div class="image-viewer" (click)="closeImage()">
-      <img [src]="selectedImage">
-    </div>
+  @if(selectedImage){
+
+  <div class="image-viewer" (click)="closeImage()">
+    <img [src]="selectedImage">
+  </div>
 
   }
 
