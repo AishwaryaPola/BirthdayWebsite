@@ -37,7 +37,7 @@ export class GreetingComponent implements OnInit {
 
     setInterval(() => {
       this.launchConfetti();
-    }, 10000);
+    }, 5000);
 
   }
 

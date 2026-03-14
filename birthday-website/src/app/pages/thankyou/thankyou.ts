@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -8,16 +8,4 @@ import { CommonModule } from '@angular/common';
   templateUrl: './thankyou.html',
   styleUrls: ['./thankyou.css']
 })
-export class ThankyouComponent implements OnInit {
-
-  showMessage = false;
-
-  ngOnInit(): void {
-
-    setTimeout(() => {
-      this.showMessage = true;
-    }, 5000);
-
-  }
-
-}
+export class ThankyouComponent {}
