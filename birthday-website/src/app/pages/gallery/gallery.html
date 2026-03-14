@@ -1,4 +1,4 @@
-<div class="gallery-container">
+<!-- <div class="gallery-container">
 
   <div class="background-decor">
     <span>🎈</span>
@@ -43,5 +43,81 @@
   </div>
 
   }
+
+</div> -->
+
+
+
+<div class="gallery-container">
+
+  <!-- Background Music -->
+ <audio id="birthdayMusic" autoplay loop>
+  <source src="assets/music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+  <!-- Floating Balloons -->
+  <div class="balloons">
+    <span>🎈</span>
+    <span>🎈</span>
+    <span>🎈</span>
+    <span>🎈</span>
+    <span>🎈</span>
+    <span>🎈</span>
+  </div>
+
+  <!-- Floating Decorations -->
+  <div class="background-decor">
+    <span>🎉</span>
+    <span>💖</span>
+    <span>✨</span>
+    <span>🎂</span>
+  </div>
+
+  <h1 class="gallery-title">
+    Some Beautiful Moments of You 💫
+  </h1>
+
+  <p class="memory-subtitle">
+    Every picture here holds a little story and a beautiful moment
+  </p>
+
+  <div class="polaroid-wall">
+
+    @for (memory of memories; track memory) {
+
+      <div class="polaroid" (click)="openImage(memory.image)">
+
+        <img [src]="memory.image" alt="memory">
+
+        <div class="caption">
+          <p>{{memory.description}}</p>
+          <span class="date">{{memory.date}}</span>
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+  @if(selectedImage){
+
+  <div class="image-viewer" (click)="closeImage()">
+    <img [src]="selectedImage">
+  </div>
+
+  }
+
+  <div class="next-section">
+
+    <p class="next-message">
+      These memories are just a glimpse of the beautiful journey 💫
+    </p>
+
+    <button class="next-btn" routerLink="/thankyou">
+  Click here🎁
+</button>
+
+  </div>
 
 </div>
